@@ -1,6 +1,6 @@
 {
     "name": "babel-playcanvas-template",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A template for running ES6 with PlayCanvas Editor",
     "main": "index.js",
     "scripts": {

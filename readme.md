@@ -190,14 +190,12 @@ it.
 
 #### Starting the server
 
-Now you can type
-
-`npm start` in the project root. This will, build and upload your code, then start a local server
+Now you can type `npm start` in the project root. This will, build and upload your code, then start a local server
 to serve any changes you make.  When you change your code, your launch window will automatically
 update.
 
 If you need to upload again, just stop the server with CTRL+C and type `npm start` again. Then refresh
-your launch window.
+your launch and Editor windows.
 
 ### Development builds without local serving
 
