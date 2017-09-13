@@ -1,14 +1,62 @@
 {
-  "name": "babel-playcanvas-template",
-  "version": "1.0.0",
-  "description": "A template for running ES6 with PlayCanvas Editor",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "PlayCanvas"
-  ],
-  "author": "Mike Talbot",
-  "license": "ISC"
+    "name": "babel-playcanvas-template",
+    "version": "1.0.0",
+    "description": "A template for running ES6 with PlayCanvas Editor",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=development webpack --config webpack.config.js && cross-env UPLOAD=no NODE_ENV=development webpack-dev-server --config webpack.config.js --port 8081 --inline --hot",
+        "https": "cross-env NODE_ENV=development webpack --config webpack.config.js && cross-env UPLOAD=no NODE_ENV=development webpack-dev-server --config webpack.config.js --port 8081 --inline --hot --https",
+        "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    },
+    "keywords": [
+        "PlayCanvas"
+    ],
+    "author": "Mike Talbot",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/whydoidoit/babel-playcanvas-template.git"
+    },
+    "bugs": {
+        "url": "https://github.com/whydoidoit/babel-playcanvas-template/issues"
+    },
+    "homepage": "https://github.com/whydoidoit/babel-playcanvas-template#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-es2017": "^6.24.1",
+        "cross-env": "^5.0.5",
+        "css-loader": "^0.28.7",
+        "node-sass": "^4.5.3",
+        "playcanvas-webpack-plugin": "^1.0.3",
+        "raw-loader": "^0.5.1",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.18.2",
+        "webpack": "^3.5.6",
+        "webpack-dev-server": "^2.7.1"
+    },
+    "dependencies": {
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.26.0",
+        "createscript": "^1.0.1",
+        "javascript-dual-inherit": "^1.0.0",
+        "playcanvas-awaitassets": "^1.0.0",
+        "playcanvas-debug-lines": "^1.0.1",
+        "playcanvas-delay": "^1.0.1",
+        "playcanvas-get-position": "^1.0.0",
+        "playcanvas-movetowards": "^1.0.0",
+        "playcanvas-of-type": "^1.0.1",
+        "playcanvas-sendmessage": "^1.0.0",
+        "playcanvas-timeout": "^1.0.1",
+        "playcanvas-vector-extensions": "^1.0.0",
+        "playcanvas-vector-math": "^1.0.1",
+        "playcanvas-working-vectors": "^1.0.0",
+        "search-to-parameters": "^1.0.0",
+        "temporary-object-pooling": "^1.0.1",
+        "whydoidoit-resolver": "^1.0.0",
+        "whydoidoit-sign": "^1.0.0"
+    }
 }

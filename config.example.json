@@ -1,0 +1,6 @@
+{
+    "bearer": "BEARER TOKEN - open a developer console for the editor and type config.accessToken",
+    "assetId": "Asset id from the project panel when selecting your script",
+    "projectId": "Project ID from the overview screen",
+    "browsers": "> 1%"
+}
