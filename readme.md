@@ -88,6 +88,17 @@ You can get that from [here](https://nodejs.org).
 
 ## Installing the template project
 
+**EITHER**
+
+Download this repo, change to the directory and type:
+
+```shell
+npm install
+```
+
+**OR**
+**OR**
+
 Make a directory and change to it
 
 ```shell
