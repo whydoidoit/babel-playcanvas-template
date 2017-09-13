@@ -104,8 +104,9 @@ In the template this imports a bunch of PlayCanvas extensions and then a single
 
 ## Writing your own code
 
-Create a file in `src` and script what you like.  Just make sure that it is imported
-by `main.js`.  When you start developing things that import each other, you just need
+Create a file in `src` or a sub directory and script what you like.  Just make sure that it is imported
+by `main.js` (note that paths are relative to `src` and must start with a `./`).  
+When you start developing things that import each other, you just need
 to make sure that something in `main.js` imports something that imports the code you
 add!  
 
@@ -232,6 +233,19 @@ blah(something);
 
 You may also use `require` syntax if the whole file is written that way.
 
+## Targeting different browsers
+
+`config.json` also contains a `"browsers"` entry - this is a query in the
+[browserslist](https://github.com/ai/browserslist) format that tells Babel
+what it needs to augment in the target output.  By default it's set to `> 1%`
+which means that the output code will work on `99%` of browsers in the field.
+
+If you set it to `last 2 Chrome versions` then a lot more of ES6 is implemented
+already and there will be less work done, so a smaller output file
+(and possibly some code could be faster).  
+
+Using this method you could actually create multiple builds and choose between them.
+
 # Conclusion
 
 Hopefully this will get you started using ES6 and modules with PlayCanvas. Feel free to
@@ -265,6 +279,6 @@ Google for how to change it).
 **Don't forget to change your launch URL and the local parameter `?local=http://localhost:8081` to HTTPS!!**
 
 Personally I've used [Certificate Tools](https://certificatetools.com) to make certs that work. Make sure you sent the `Subject
-Alternative Name(s) DNS` to localhost as well as `Common Names`.  It also provides you with a thing
+Alternative Name(s) DNS` to `localhost` **as well as** `Common Names`.  It also provides you with a thing
 to run to pack .p12 into a .pem after you've generated your certificate.  It only took me about 5 tries
 to work out what I had to do with it! 
