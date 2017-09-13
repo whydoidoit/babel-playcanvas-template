@@ -97,7 +97,6 @@ npm install
 ```
 
 **OR**
-**OR**
 
 Make a directory and change to it
 
